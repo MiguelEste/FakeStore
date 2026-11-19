@@ -50,7 +50,7 @@ pnpm build
 pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) om de fake store te openen. Mogelijk op een andere poort, die terminal voor actuele URL
+Open [http://localhost:3000](http://localhost:3000) om de fake store te openen. Mogelijk op een andere poort, zie terminal voor actuele URL
 
 ## Hoe wordt de data opgehaald
 
