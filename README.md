@@ -1,6 +1,6 @@
 FakeStoreApi opdracht door Michael Ponsioen
 
-## Getting Started
+## Installatie
 
 Installeer dependencies
 
