@@ -20,7 +20,7 @@ export default async function ProductList({
   return (
     <div className="flex flex-col md:flex-row">
       <ProductFilter categories={categories} selected={category ?? ""} />
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-5 flex-1 my-5 md:mx-5 md:my-0">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-5 flex-1 my-5 md:mx-5 md:my-0 group-has-data-pending:opacity-50 group-has-data-pending:pointer-events-none">
         {filtered.length > 0 &&
           filtered.map((product) => (
             <ProductOverview key={product.id} product={product} />

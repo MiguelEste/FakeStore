@@ -20,8 +20,15 @@ export function ProductFilter({
 
   function handleChange(value: string) {
     const params = new URLSearchParams(searchParams);
-    if (value) params.set("category", value);
-    else params.delete("category");
+
+    if (value) {
+      params.set("category", value);
+    } else {
+      params.delete("category");
+    }
+
+    // naviate to new url with selected category
+    // make sure scroll position is respected to prevent page jumping
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }
 
@@ -33,17 +40,20 @@ export function ProductFilter({
    */
   const radioInput = ({ key, value }: TRadioInputData) => {
     const labelText = key[0].toUpperCase() + key.slice(1);
+
+    // use key if value is undefined
+    const v = value ?? key;
     return (
       <div key={key}>
         <label>
           <input
             name="categories"
             type="radio"
-            value={value ?? key}
-            checked={selected === (value ?? key)}
+            value={v}
+            checked={selected === v}
             onChange={(e) => handleChange(e.target.value)}
           />
-          {labelText}{" "}
+          {labelText}
         </label>
       </div>
     );
