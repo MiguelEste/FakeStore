@@ -6,7 +6,7 @@ FakeStoreAPI-opdracht door Michael Ponsioen
 
 ### Benodigdheden
 
-[https://nodejs.org/en/download](Node.js 20.9.0 of nieuwer)
+[Node.js 20.9.0 of nieuwer](https://nodejs.org/en/download)
 pnpm:
 
 ```bash
